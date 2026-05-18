@@ -16,16 +16,18 @@ namespace webApi.Features.Controllers
         }
 
         [HttpPost("upload")]
+        [RequestSizeLimit(2147483648)]
         public async Task<IActionResult> Upload([FromForm] UploadArquivoDto dto)
         {
             if (dto.Arquivo == null || dto.Arquivo.Length == 0)
                 return BadRequest("Arquivo inválido.");
 
-            await _ecdImportService.ImportarArquivoAsync(dto.Arquivo);
+            var total = await _ecdImportService.ImportarArquivoAsync(dto.Arquivo);
 
             return Ok(new
             {
-                mensagem = "Arquivo importado com sucesso."
+                mensagem = "Arquivo importado com sucesso.",
+                registros = total
             });
         }
     }

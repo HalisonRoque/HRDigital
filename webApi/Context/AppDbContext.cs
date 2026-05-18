@@ -25,11 +25,11 @@ namespace webApi.Context
 
             modelBuilder.Entity<ControleTributo>().ToTable("controletributos");
 
-            // modelBuilder.Entity<Empresa>()
-            //     .HasOne(e => e.Cliente)
-            //     .WithMany()
-            //     .HasForeignKey(e => e.ClienteID)
-            //     .OnDelete(DeleteBehavior.Cascade);
+            modelBuilder.Entity<Empresa>()
+                .HasOne(e => e.Cliente)
+                .WithMany()
+                .HasForeignKey(e => e.ClienteID)
+                .OnDelete(DeleteBehavior.Cascade);
         }
     }
 }

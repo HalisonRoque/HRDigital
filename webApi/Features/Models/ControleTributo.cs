@@ -10,34 +10,34 @@ namespace webApi.Features.Models
         public int Id { get; set; }
 
         [MaxLength(255)]
-        public string CodigoContabil { get; set; } = string.Empty;
+        public string? CodigoContabil { get; set; }
 
-        public string DescricaoCodigoContabil { get; set; } = string.Empty;
+        public string? DescricaoCodigoContabil { get; set; }
 
-        public int MesCompetencia { get; set; }
+        public int? MesCompetencia { get; set; }
 
-        public int AnoCompetencia { get; set; }
+        public int? AnoCompetencia { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal ValorPRovisaoRecolher { get; set; }
+        public decimal? ValorPRovisaoRecolher { get; set; }
 
         [MaxLength(50)]
-        public string TipoLancamentoPrevisao { get; set; } = string.Empty;
+        public string? TipoLancamentoPrevisao { get; set; }
 
-        public string Historico { get; set; } = string.Empty;
+        public string? Historico { get; set; }
 
         public DateTime? Vencimento { get; set; }
 
         public DateTime? DataRecolhimento { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal ValorRecolhimento { get; set; }
+        public decimal? ValorRecolhimento { get; set; }
 
         [MaxLength(50)]
-        public string TipoLancamento { get; set; } = string.Empty;
+        public string? TipoLancamento { get; set; }
 
         [MaxLength(50)]
-        public string Status { get; set; } = string.Empty;
+        public string? Status { get; set; }
 
         public DateTime? DataCadastro { get; set; }
 
@@ -50,73 +50,73 @@ namespace webApi.Features.Models
         public int? MensagemID { get; set; }
 
         [MaxLength(50)]
-        public string ChaveVinculo { get; set; } = string.Empty;
+        public string? ChaveVinculo { get; set; }
 
         public bool? Origem { get; set; }
 
         public DateTime? DataLancamento { get; set; }
 
         [MaxLength(150)]
-        public string Regra { get; set; } = string.Empty;
+        public string? Regra { get; set; }
 
         [MaxLength(250)]
-        public string TipoRegra { get; set; } = string.Empty;
+        public string? TipoRegra { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal SaldoInicialConta { get; set; }
+        public decimal? SaldoInicialConta { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal SaldoFinalConta { get; set; }
+        public decimal? SaldoFinalConta { get; set; }
 
         [MaxLength(250)]
-        public string Lancamento { get; set; } = string.Empty;
+        public string? Lancamento { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal Creditos { get; set; }
+        public decimal? Creditos { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal Debitos { get; set; }
+        public decimal? Debitos { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal ValorPagamento { get; set; }
+        public decimal? ValorPagamento { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal ValorDesconto { get; set; }
+        public decimal? ValorDesconto { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal SaldoFinalReal { get; set; }
+        public decimal? SaldoFinalReal { get; set; }
 
         [MaxLength(250)]
-        public string LancamentoInicial { get; set; } = string.Empty;
+        public string? LancamentoInicial { get; set; }
 
         [MaxLength(255)]
-        public string ChaveVinculoMatch { get; set; } = string.Empty;
+        public string? ChaveVinculoMatch { get; set; }
 
-        public string NovoHistorico { get; set; } = string.Empty;
+        public string? NovoHistorico { get; set; }
 
-        public bool? Manteve { get; set; } = false;
+        public bool? Manteve { get; set; }
 
-        public string HistoricoOriginal { get; set; } = string.Empty;
+        public string? HistoricoOriginal { get; set; }
 
         [MaxLength(255)]
-        public string CodigoContabilOriginal { get; set; } = string.Empty;
+        public string? CodigoContabilOriginal { get; set; }
 
         [Column(TypeName = "decimal(18,2)")]
-        public decimal ValorAnterior { get; set; }
+        public decimal? ValorAnterior { get; set; }
 
         [MaxLength(100)]
-        public string ContaContraPartida { get; set; } = string.Empty;
+        public string? ContaContraPartida { get; set; }
 
-        public int UsuarioConciliou { get; set; }
+        public int? UsuarioConciliou { get; set; }
 
-        public int Pontos { get; set; } = 0;
+        public int? Pontos { get; set; }
 
         [MaxLength(255)]
-        public string LancamentosRelacionados { get; set; } = string.Empty;
+        public string? LancamentosRelacionados { get; set; }
 
         public int? Arquivo_Id { get; set; }
 
-        public bool? IsSaldoInicial { get; set; } = false;
+        public bool? IsSaldoInicial { get; set; }
 
         public int EmpresaId { get; set; }
 
