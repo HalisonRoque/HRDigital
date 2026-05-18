@@ -247,7 +247,7 @@ No arquivo `appsettings.json`:
 
 ```json
 "ConnectionStrings": {
-  "DefaultConnection": "server=localhost;database=SEU_DB;user=SEU_USER;password=SUA_SENHA"
+  "DefaultConnection": "server=localhost;database=SEU_DB;user=SEU_USER;password=SUA_SENHA;AllowLoadLocalInfile=true;DefaultCommandTimeout=300;"
 }
 ```
 
